@@ -84,23 +84,6 @@ app.post("/logs", async (req, res) => {
     generateQuery(spanId, 'spanId');
     generateQuery(commit, 'commit');
     generateQuery(parentResourceId, 'metadata.parentResourceId');
-    
-    // if (level && level.length > 0)
-    //   optionsArray.push({ text: { query: level, path: "level" } });
-    // if (message && message.length > 0)
-    //   optionsArray.push({ text: { query: message, path: "message" } });
-    // if (resourceId && resourceId.length > 0)
-    //   optionsArray.push({ text: { query: resourceId, path: "resourceId" } });
-    // if (traceId && traceId.length > 0)
-    //   optionsArray.push({ text: { query: traceId, path: "traceId" } });
-    // if (spanId && spanId.length > 0)
-    //   optionsArray.push({ text: { query: spanId, path: "spanId" } });
-    // if (commit && commit.length > 0)
-    //   optionsArray.push({ text: { query: commit, path: "commit" } });
-    // if (parentResourceId && parentResourceId.length > 0)
-    //   optionsArray.push({
-    //     text: { query: parentResourceId, path: "metadata.parentResourceId" },
-    //   });
 
     if (startDate && startDate.length > 0 && endDate && endDate.length > 0) {
       pipeline.push({
